@@ -4,15 +4,22 @@ namespace App\Model;
 use Core\Model;
 
 class Student extends Model{
-    public function __construct()
+    public function __construct($params)
     {
         $this->table = "students";
 
-        if (isset($_GET['id']) && !empty($_GET['id'])) {
-            $this->id = $_GET['id'];
+        if (isset($params['id']) && !empty($params['id'])) {
+            $this->id = $params['id'];
         }
 
         $this->getConnection();
+    }
+
+    public function get() {
+        $sql = "SELECT * FROM ".$this->table." WHERE idstudent=".$this->id;
+        $query = $this->_connexion->prepare($sql);
+        $query->execute();
+        return $query->fetch();    
     }
 
     public function getList() {

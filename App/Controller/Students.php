@@ -16,13 +16,16 @@ class Students extends Controller {
         $this->render('add_student');
     }
 
-    public function edit()
+    public function edit($id)
     {
-        $this->loadModel('Student');
+        $this->loadModel('Student', array('id' => intval($id)));
 
         $student = $this->Student->get();
-        var_dump($student);
 
-        $this->render('edit_student', array('student' => $student));
+        if (!empty($student)) {
+            $this->render('edit_student', array('student' => $student));
+        } else {
+            header('Location: ' . PROJECT_PATH);
+        }
     }
 }

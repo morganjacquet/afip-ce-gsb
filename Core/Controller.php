@@ -10,11 +10,11 @@ abstract class Controller {
      * @param string $model model name to load
      * @return void
      */
-    public function loadModel(string $model){
+    public function loadModel(string $model, array $params = []){
         require_once('../App/Model/'.$model.'.php');
         
         $model_path = 'App\Model\\' . $model; 
-        $this->$model = new $model_path();
+        $this->$model = new $model_path($params);
     }
 
     /**

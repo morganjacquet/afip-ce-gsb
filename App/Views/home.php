@@ -25,7 +25,7 @@
                     <td><?=$value_student['nationality'];?></td>
                     <td><?=$value_student['formation'];?></td>
                     <td>
-                        <a href="<?=PROJECT_PATH?>Students/edit?id=<?=$value_student['idstudent'];?>" class="btn btn-default"><span class="glyphicon glyphicon-pencil" style="padding: 2px;"></span></a>
+                        <a href="<?=PROJECT_PATH?>Students/edit/<?=$value_student['idstudent'];?>" class="btn btn-default"><span class="glyphicon glyphicon-pencil" style="padding: 2px;"></span></a>
                         <a href="#" class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></a>
                     </td>
                 </tr>
