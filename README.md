@@ -26,7 +26,9 @@ $mysql_config = array(
     'username' => "",
     'password' => "",
 );
-```
+```  
+
+Pour l'instalation de la base de données un dump ce trouve dans le dossier `/_SQL`
 ## Auteurs
 
 - [@morganjacquet](https://github.com/morganjacquet)
