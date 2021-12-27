@@ -5,6 +5,7 @@ require_once('../Core/Controller.php');
 include('../App/config/app.php');
 
 define('ROOT', str_replace('index.php','',$_SERVER['SCRIPT_FILENAME']));
+define('PROJECT_URL', $app_config['url']);
 define('PROJECT_PATH', $app_config['path']);
 
 $params = explode('/', $_GET['p']);

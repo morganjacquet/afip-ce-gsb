@@ -6,6 +6,9 @@
     <meta name="viewport" content="width= , initial-scale=1.0">
     <link rel="stylesheet" href="<?=PROJECT_PATH?>/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?=PROJECT_PATH?>/assets/css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <title>Gestion d'élèves</title>
 </head>
 <body>
