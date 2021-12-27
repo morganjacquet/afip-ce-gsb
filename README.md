@@ -1,7 +1,7 @@
 
-# Gestion d'élèves
+# Gestion d'élèves - Projet AFIP Formations
 
-Le but de ce projet est la gestion d'élèves et de formation. Dans un premier temps à pouvoir insérer des stagiaires en formation. Ces stagiaires ont un nom, un prénom, une nationalité, un type de formation et un formateur dans une salle entre deux dates.
+Le but de ce projet est la gestion d'élèves et de formations. Dans un premier temps ont doit pouvoir créer des formations, insérer des formateurs, créer des séances avec un formateurs une salles et des horaires et insérer des stagiaires en formation. Les stagiaires ont un nom, un prénom, une nationalité, un type de formation et une ou plusieurs séances.
 
 
 
@@ -28,7 +28,12 @@ $mysql_config = array(
 );
 ```  
 
-Pour l'instalation de la base de données un dump ce trouve dans le dossier `/_SQL`
+Pour l'instalation de la base de données un dump ce trouve dans le dossier `/_SQL`  
+## Technologies utilisées
+
+**Client:** HTML, CSS, JS, JQuery, Bootstrap V3.4, Select2.js
+
+**Serveur:** PHP
 ## Auteurs
 
 - [@morganjacquet](https://github.com/morganjacquet)
