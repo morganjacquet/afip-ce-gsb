@@ -21,7 +21,7 @@ abstract class Model{
      * @return void
      */
     public function getConnection() {
-        include '../App/config/mysql.php';
+        include '../../config/mysql.php';
 
         $this->host = $mysql_config['host'];
         $this->db_name = $mysql_config['db_name'];

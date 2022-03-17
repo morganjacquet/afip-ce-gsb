@@ -11,9 +11,9 @@ abstract class Controller {
      * @return void
      */
     public function loadModel(string $model, array $params = []){
-        require_once('../App/Model/'.$model.'.php');
+        require_once('../../Model/'.$model.'.php');
         
-        $model_path = 'App\Model\\' . $model; 
+        $model_path = 'Model\\' . $model; 
         $this->$model = new $model_path($params);
     }
 
@@ -27,6 +27,6 @@ abstract class Controller {
     public function render(string $file, array $data = []){
         extract($data);
 
-        require_once('../App/Views/'.$file.'.php');
+        require_once('../../Views/'.$file.'.php');
     }
 }

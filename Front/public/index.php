@@ -1,8 +1,8 @@
 <?php
-require_once('../Core/Model.php');
-require_once('../Core/Controller.php');
+require_once('../../Core/Model.php');
+require_once('../../Core/Controller.php');
 
-include('../App/config/app.php');
+include('../../Front/App/config/app.php');
 
 define('ROOT', str_replace('index.php','',$_SERVER['SCRIPT_FILENAME']));
 define('PROJECT_URL', $app_config['url']);
@@ -15,10 +15,10 @@ if ($params[0] != "") {
 
     $action = isset($params[1]) ? $params[1] : 'index';
     
-    if (file_exists('../App/Controller/'.$controller.'.php')) {
-        require_once('../App/Controller/'.$controller.'.php');
+    if (file_exists('../../Front/App/Controller/'.$controller.'.php')) {
+        require_once('../../Front/App/Controller/'.$controller.'.php');
 
-        $controller_path = 'App\Controller\\' . $controller;
+        $controller_path = 'Front\App\Controller\\' . $controller;
         
         $controller = new $controller_path();
         if (method_exists($controller, $action)) {
@@ -35,9 +35,9 @@ if ($params[0] != "") {
         echo "Erreur 404 - La page est introuvable";
     }
 } else {
-    require_once('../App/Controller/Home.php');
+    require_once('../../Front/App/Controller/Home.php');
 
-    $controller = new App\Controller\Home();
+    $controller = new Front\App\Controller\Home();
 
     $controller->index();
 }
